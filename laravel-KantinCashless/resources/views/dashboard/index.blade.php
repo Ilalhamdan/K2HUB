@@ -91,7 +91,7 @@
                         {{ $order->queue_code ?? ('No.'.$order->queue_number) }}
                     </div>
                     <div style="font-size:13px;font-weight:700;color:#96A480;">{{ $order->customer_name }}</div>
-                    <div style="font-size:11px;color:#94a3b8;font-weight:500;">{{ $order->store->name }} · Kelas {{ $order->customer_class ?: '-' }}</div>
+                    <div style="font-size:11px;color:#94a3b8;font-weight:500;">{{ $order->store?->name ?? 'Toko Terhapus' }} · Kelas {{ $order->customer_class ?: '-' }}</div>
                 </div>
                 <div>
                     @php

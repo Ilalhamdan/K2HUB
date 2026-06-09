@@ -11,7 +11,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $koperasiStore = Store::where('unit', 'koperasi')->firstOrFail();
+        $koperasiStore = Store::where('unit', 'koperasi')->first();
         $koperasiCount = Store::where('unit', 'koperasi')->count();
         $kantinCount   = Store::where('unit', 'kantin')->count();
 
